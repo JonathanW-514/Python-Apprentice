@@ -8,10 +8,7 @@ Then change the code so that the turtle has a different image ( look in the 'ima
 directory ) and moves to the corners of the screen in a square pattern. 
 """
 import turtle
-tina.shape("turtle")
 tina = turtle.Turtle
-from matplotlib.patches import Polygon
 turtle.setup(width=600, height=600)
-
-angle = 360/sides # type: ignore
-
+angle = 360/side 
+tina.draw_polygon(4)
