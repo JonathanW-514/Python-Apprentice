@@ -13,7 +13,7 @@ directory ) and moves to the corners of the screen in a square pattern.
 
 import turtle
 
-def set_background_image(window, image_name):
+def se_background_image(window, image_name):
     """Set the background image of the turtle window to the image with the given name."""
 
     from pathlib import Path

@@ -24,7 +24,6 @@ import turtle
 turtle.setup(width=600, height=600)
 tina = turtle.Turtle()
 tina.shape("turtle")
-set_turtle_image(tina, 'moustache1.gif')
 while True:
     tina.goto(300, 300)
     tina.goto(300, -300)
