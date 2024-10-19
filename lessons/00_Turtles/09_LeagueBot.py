@@ -14,7 +14,7 @@ import turtle as turtle
 
 screen = turtle.Screen()
 screen.setup(width=600, height=600, startx=0, starty=0)
-screen.bgcolor('white')
+screen.bgcolor('black')
 
 t = turtle.Turtle()
 
@@ -49,5 +49,9 @@ def turtle_clicked(t, x, y):
         x (int): The x coordinate of the click
         y (int): The y coordinate of the click
     """
-set_turtle_image(turtle, 'pikachu.gif')
+set_turtle_image(turtle, 'leaguebot_bolt.gif')
 turtle.color("blue")
+for i in range(6):
+    turtle.forward(100)
+    turtle.left(60)
+turtle.exitonclick()
