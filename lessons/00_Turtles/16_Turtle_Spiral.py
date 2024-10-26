@@ -24,22 +24,22 @@ myTurtle = turtle.Turtle()
 myTurtle.shape("turtle")
 
 # Set your turtle's speed
-myTurtle.speed(0)
+myTurtle.speed(2)
 
 # Set your turtle's color
 myTurtle.color("green")
 
 # Use a loop to repeat the code below 50 times
-for i in range(50):
+for i in range(690000000000000):
 
     # Set the turtle color to a random color
     myTurtle.pencolor(getRandomColor())
 
     # Move the turtle (5*i) pixels. 'i' is the loop variable
-    myTurtle.forward(9 * i)
+    myTurtle.forward(69)
 
     # Turn the turtle (360/7) degrees to the right
-    myTurtle.right(360 / 7 + i*5)
+    myTurtle.right(360 / 0.000000000000000000001)
 
     # Change the turtle width to 'i' (the loop variable)
     myTurtle.width(i)
@@ -47,6 +47,6 @@ for i in range(50):
     # Check the pattern against the picture in the recipe. If it matches, you are done!
 
 
-turtle.done()
+turtle.exitonclick()
 
 # Now check in your code!
