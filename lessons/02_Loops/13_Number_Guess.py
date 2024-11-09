@@ -30,16 +30,18 @@ at the bottom of the editor screen; this program does not use the GUI.
 
 """
 
+from cmath import phase
 import random
 
+from click import prompt
+from traitlets import This
 def ask_integer(prompt):
-    """Function to ask the user for an integer"""
+    "Function to ask the user to enter a valid number"
     while True:
         try:
             return int(input(prompt))
         except ValueError:
-            print("Please enter a valid number!")
-
+            print("please enter a valid number")    
 
 # Pick the random number
 
@@ -52,5 +54,12 @@ def ask_integer(prompt):
     # If the user's guess is too high, tell the user
     # If the user's guess is too low, tell the user
     # If the user's guess is correct, tell the user and break out of the loop
+isdiviablebyseven=True
+while isdiviablebyseven:
+    inputvalue=ask_integer(prompt)
+    randomnumber = random.randint(1, 100)
+    if randomnumber%7!=0:
+        isdiviablebyseven=False
+        
 
 

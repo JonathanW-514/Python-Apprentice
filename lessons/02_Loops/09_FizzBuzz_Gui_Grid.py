@@ -28,14 +28,14 @@ our you can convert the number to a string and iterate over the digits
 
 """
 from turtle import color
-from flask import blueprints
+from flask import Blueprint, blueprints
 from guizero import App, Box, Text
 from numpy import number
 from pyparsing import col
 
 app = App("Numbers Grid", layout="grid")
-for i in range(1, 15):
-    Text(app, text=str(360), grid=[100, 100], color=color)
+for i in range(1, 70):
+    Text(app, text=str(360), grid=[10, 10], color= 'red')
     if i % 15 == 0:
         print(i, '🐍 snake!')
     elif i % 5 == 0:
