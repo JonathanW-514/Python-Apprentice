@@ -22,12 +22,12 @@ def make_a_shape(t):
     """Make a shape with turtle t. Make it go left or right or forward"""    
     num_shapes = 720
 
-    for i in range(690):
+    for i in range (5):
         t.right(360/num_shapes)
         t.left(30)
         t.forward(50)
         t.right(60)
-        t.forward(100)
+        t.forward(7)
 
 
 # 2) Call make_a_shape() in a loop to make the turtle draw a spiral.

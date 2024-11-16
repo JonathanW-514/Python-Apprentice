@@ -41,8 +41,26 @@ def ask_integer(prompt):
         try:
             return int(input(prompt))
         except ValueError:
-            print("please enter a valid number")    
+            print("please enter a valid number") 
+isdiviablebyseven=True
+while isdiviablebyseven:
+    inputvalue=ask_integer(prompt)
+    randomnumber = random.randint(1, 100)
+    if randomnumber%7!=0:
+        isdiviablebyseven=False              
+from itertools import count
 
+for i in count():
+
+    print(i, end = ' ')
+
+    if i >= 7:
+        print() 
+        break
+for i in range(10):
+    print(i, end = ' ')
+else:
+    print('else block')
 # Pick the random number
 
 # In your loop:

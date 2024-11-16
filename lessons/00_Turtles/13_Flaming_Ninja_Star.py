@@ -44,7 +44,7 @@ for i in range(25):
 
     t.left(40) 
 
-    t.forward(flameSize) 
+    t.forward(baseSize) 
 
     t.right(170) 
 
