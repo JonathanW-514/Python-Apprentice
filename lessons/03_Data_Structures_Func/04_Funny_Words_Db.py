@@ -17,7 +17,7 @@ Selected' button will remove the definition from the dictionary.
 
 The module has a limit of storing up to 5 definitions. If the limit is reached,
 an error message will be displayed and new definitions will not be added.
-
+ope
 """
 
 
@@ -91,9 +91,9 @@ def update_listbox(db):
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
     l = [
-        "Item 1: Fake Definition 1",
-        "Item 2: Fake Definition 2",
-        "Item 3: fake Definition 3"
+        "jay is a goofy a",
+        "?spongejay sussypants",
+        "?hohohohohohojay = sussy funny man"
     ]
 
     # Add each definition to a string

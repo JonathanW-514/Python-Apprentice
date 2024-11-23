@@ -44,7 +44,8 @@ class TicTacToe:
     turn_n = 0
     turn = X_MARK
 
-    def __init__(self, win_func=check_win):
+
+def __init__(self, win_func=check_win):
         self.board = None # The stoage for user's markers
         
         self.app = App('Tic Tac Toe Game', bg='burlywood')
@@ -59,7 +60,7 @@ class TicTacToe:
 
         self.reset()
 
-    def reset(self):
+def reset(self):
         """Reset the game state"""
         self.turn_n = 0
         self.turn = X_MARK
@@ -73,16 +74,16 @@ class TicTacToe:
             for y in range(3):
                 self.buttons[x][y] = PushButton(self.board_pane, text='', grid=[x, y], width=3, command=self.do_turn, args=[x,y])
 
-    def start(self):
+def start(self):
         """Start the game"""
         self.app.display()
 
-    @property
-    def current_turn(self):
+@property
+def current_turn(self):
         """Return the current player's marker, based on the current turn number"""
         return [X_MARK, O_MARK][self.turn_n % 2]
 
-    def do_turn(self, x, y):
+def do_turn(self, x, y):
         """Handle one player turn, and return a marker if one of the players won"""
         self.board[x][y] = self.current_turn
         self.buttons[x][y].text = self.current_turn
@@ -102,6 +103,68 @@ class TicTacToe:
         elif self.turn_n == 9:
             self.message.value = "It's a draw!"
             info("Tic-tac-toe","It's a draw!")
+            info(TicTacToe)
+x_wins_boards = [
+    # x wins in row 1
+    [
+        ['o','' ,'o'],
+        ['x','x','x'],
+        ['o','' ,''],
+    ],
+    # x wins in col 2
+    [
+        ['o','' ,'x'],
+        ['' ,'o','x'],
+        ['o','' ,'x'],
+    ],
+    # x wins in the first diagonal
+    [
+        ['x','' ,'o'],
+        ['' ,'x','o'],
+        ['o','' ,'x'],
+    ]
+]
 
-ttt = TicTacToe(check_win)
-ttt.start()
+o_wins_boards = [
+    # o wins in row 0
+    [
+        ['o','o','o'],
+        ['' ,'x',''],
+        ['x','' ,'x'],
+    ],
+    # o wins in col 1
+    [
+        ['x','o','x'],
+        ['' ,'o',''],
+        ['' ,'o','x'],
+    ],
+    # o wins in the second diagonal
+    [
+        ['x','' ,'o'],
+        ['' ,'o',''],
+        ['o','x','x'],
+    ]
+]
+
+no_winner_boards = [
+    # No winner example 1
+    [
+        ['x','o','x'],
+        ['o','x','o'],
+        ['o','x','o'],
+    ],
+    # No winner example 2
+    [
+        ['x','o','x'],
+        ['x','o','o'],
+        ['o','x','x'],
+    ],
+    # No winner example 3
+    [
+        ['x','o','x'],
+        ['x','x','o'],
+        ['o','x','o'],
+    ]
+]
+
+

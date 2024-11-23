@@ -1,10 +1,10 @@
-from mazelib import Maze
+from mazelib import Maze # type: ignore
 from mazelib.generate.Prims import Prims
 from mazelib.generate.DungeonRooms import DungeonRooms
 from dataclasses import dataclass
 from guizero import App, Waffle
 import numpy as np
-from typing import List, Tuple
+#from typing import List, Tuple
 from mazelib.solve.BacktrackingSolver import BacktrackingSolver
 
 
