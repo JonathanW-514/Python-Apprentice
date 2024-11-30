@@ -39,7 +39,7 @@ def add_definition(db, key, value):
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
     """
 
-    # Check the limit
+    
 
     # Set the item in the database
 
@@ -58,7 +58,7 @@ def delete_definition(db, key):
         None
     """
 
-    # Delete the item from db if it is present
+    
 
     pass
 
@@ -91,9 +91,9 @@ def update_listbox(db):
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
     l = [
-        "jay is a goofy a",
-        "?spongejay sussypants",
-        "?hohohohohohojay = sussy funny man"
+        "1",
+        "2",
+        "3"
     ]
 
     # Add each definition to a string
