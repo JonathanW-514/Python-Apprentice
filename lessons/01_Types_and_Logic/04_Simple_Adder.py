@@ -10,31 +10,13 @@ at the comments and the code snippets in the previous lessons, like
 """
 
 from tkinter import messagebox, simpledialog, Tk # import required modules
-
+import time
 
 
 window = Tk()
 
 number = simpledialog.askinteger('None',"Magic Numbers") 
-
-if number == 1:
-    messagebox.showinfo('jay + gorivia web', "1")
-if number == 2:
-    messagebox.showinfo('jay + gorivia web', "2")
-if number == 3:
-    messagebox.showinfo('jay + gorivia web', "3")
-if number == 4:
-    messagebox.showinfo('jay + gorivia web', "4")
-if number == 5:
-    messagebox.showinfo('jay + gorivia web', "5")
-
-
-
-
-
-# Ask the user for the second number
-
-# Display the sum of the two numbers 
-
-# Keep the window open
-
+number2 = simpledialog.askinteger("None", "What's ur second magic number")
+message = number + number2
+messagebox.showerror("calculating", "ples wait we calculating sum haiyah")
+time.sleep(1)
