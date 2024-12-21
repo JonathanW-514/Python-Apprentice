@@ -24,15 +24,8 @@ you can ask for a string with simpledialog.askstring().
 from tkinter import messagebox, simpledialog, Tk
 window = Tk()
 
-number = simpledialog.askinteger('None',"give 1 number")   
-
-number2 = simpledialog.askinteger('None',"give another number")
-
-# Ask the user for the math operation
-
-
-
-# Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
+number = simpledialog.askinteger('jay is a gorivia',"give 1 number")   
+number2 = simpledialog.askinteger('jay is a gorivia',"give another number")
 
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
 
