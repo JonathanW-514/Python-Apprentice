@@ -24,9 +24,11 @@ you can ask for a string with simpledialog.askstring().
 from tkinter import messagebox, simpledialog, Tk
 window = Tk()
 
-number = simpledialog.askinteger('jay is a gorivia',"give 1 number")   
-number2 = simpledialog.askinteger('jay is a gorivia',"give another number")
 
-# If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
-
-# Keep the window open
+num1 = simpledialog.askinteger('jay is a gorivia', "give a number")
+num2 = simpledialog.askinteger('jay is a gorivia', "give a second number")
+operation = simpledialog.askstring("any", "give a operation")
+if operation == 'multiplication':
+    message = num1 * num2
+    messagebox = simpledialog.askinteger(message = message)
+messagebox = simpledialog.askstring('None', "is this correct")

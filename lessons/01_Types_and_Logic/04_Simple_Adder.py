@@ -14,9 +14,3 @@ import time
 
 
 window = Tk()
-
-number = simpledialog.askinteger('None',"Magic Numbers") 
-number2 = simpledialog.askinteger("None", "What's ur second magic number")
-message = number + number2
-messagebox.showerror("calculating", "ples wait we calculating sum haiyah")
-time.sleep(1)
