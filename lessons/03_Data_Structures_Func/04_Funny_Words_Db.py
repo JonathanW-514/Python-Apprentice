@@ -159,7 +159,8 @@ PushButton(bottom_pane, text="Delete Selected", command=_delete_definition)
 # Function to handle enter key press
 def handle_enter(event):
     if event.tk_event.keysym == "Return":
-        _add_definition()
+        add_definition(db)
+        _update_listbox(db)
 
 # Bind enter key press event to handle_enter function
 app.when_key_pressed = handle_enter

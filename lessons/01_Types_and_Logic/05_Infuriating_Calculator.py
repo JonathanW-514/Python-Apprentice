@@ -30,5 +30,14 @@ num2 = simpledialog.askinteger('jay is a gorivia', "give a second number")
 operation = simpledialog.askstring("any", "give a operation")
 if operation == 'multiplication':
     message = num1 * num2
-    messagebox = simpledialog.askinteger(message = message)
-messagebox = simpledialog.askstring('None', "is this correct")
+    messagebox = messagebox.showinfo(message = message)
+if operation == 'division':
+    message = num1/num2
+    messagebox = messagebox.showinfo(message = message)
+if operation == 'addition':
+    message = num1 + num2
+    messagebox = messagebox.showinfo(message = message)
+if operation == 'subtraction':
+    message = num1 - num2
+    messagebox = messagebox.showinfo(message = message)
+    
