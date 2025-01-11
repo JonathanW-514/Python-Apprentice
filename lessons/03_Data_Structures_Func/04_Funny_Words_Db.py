@@ -46,7 +46,8 @@ def add_definition(db, key, value):
     pass
 
 
-def delete_definition(db, key):
+def delete_definition():
+    
     """
     Deletes the definition associated with the given key from the database.
 
@@ -78,7 +79,13 @@ def is_funny(definition):
     
     # Return True if the definition contains any of the funny words, False otherwise
 
-    return False
+    if is_funny:
+        "😂 " + definition + " 🤡" 
+        return True
+    else:
+        if is_funny is False:
+            return False
+
 
 def update_listbox(db):
     """
@@ -90,10 +97,10 @@ def update_listbox(db):
 
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
+    def message():
+        update_listbox(db)
     l = [
-        "1",
-        "2",
-        "3"
+        message == "message"
     ]
 
     # Add each definition to a string
@@ -114,7 +121,7 @@ def _add_definition():
     if word and definition:
         if is_funny(definition):
             definition = "😂 " + definition + " 🤡"
-        add_definition(db, word, definition)
+        add_definition(dict, word, definition)
         _update_listbox(db)
         word_entry.clear()
         definition_entry.clear()
@@ -159,7 +166,7 @@ PushButton(bottom_pane, text="Delete Selected", command=_delete_definition)
 # Function to handle enter key press
 def handle_enter(event):
     if event.tk_event.keysym == "Return":
-        add_definition(db)
+        add_definition()
         _update_listbox(db)
 
 # Bind enter key press event to handle_enter function
