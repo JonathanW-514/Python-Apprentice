@@ -27,25 +27,12 @@ HINT: You can use % and // to get the first and last digit of a number,
 our you can convert the number to a string and iterate over the digits
 
 """
-from turtle import color
-from flask import Blueprint, blueprints
 from guizero import App, Box, Text
-from numpy import number
-from pyparsing import col
 
 app = App("Numbers Grid", layout="grid")
-for i in range(1, 70):
-    Text(app, text=str(360), grid=[10, 10], color= 'red')
-    if i % 15 == 0:
-        print(i, '🐍 snake!')
-    elif i % 5 == 0:
-        print(i, '🦡 badger')
-    elif i % 3 == 0:
-        print(i, '🍄 mushroom') 
 
+# Create a 10x10 grid usingh nested for loops
 
-# Create a 10x10 grid using nested loops
-# Or you can use a single loop and calculate the row and column
 
 # In the loop, calculate or increment the number
 
