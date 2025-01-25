@@ -29,7 +29,7 @@ colors = ['green, red, orange, yellow, blue, brown' ]
 sides = 3
 angle = 360 / sides
 
-for i in range(3600000000000):
+for i in range(1010):
     if i ==700:
         tina.width(1.5)
         tina.color('orange')

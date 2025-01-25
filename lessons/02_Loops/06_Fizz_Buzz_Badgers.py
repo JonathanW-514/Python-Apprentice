@@ -17,12 +17,12 @@ Your program should print 4 badgers.
 """
 
 
-for i in range(1, 15): # Change only this line
+for i in range(0, 31, 5): # Change only this line
 
     # Don't change anything below this line
     if i % 15 == 0:
         print(i, '🐍 snake!')
-    elif i % 4 == 0:
+    elif i % 5 == 0:
         print(i, '🦡 badger')
     elif i % 3 == 0:
         print(i, '🍄 mushroom') 
