@@ -32,6 +32,7 @@ app = App("Numbers Grid", layout="grid")
 num1 = 1
 num2= 11
 col = 1
+
 for i in range(10):
     for j in range(num1, num2):
         if j % 15 == 0:
@@ -40,9 +41,9 @@ for i in range(10):
             Text(app, text = '🍄', grid = [col, i])
         elif j%5 == 0:
             Text(app, text = '🦡', grid = [col, i])
-
-    
-
+for i in range(j):
+    for j in range(i):
+        Text(app, text = j, grid = [col, i])
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
 # Call Text(app, text='...', grid=[col, row], color=...) to display something. 
