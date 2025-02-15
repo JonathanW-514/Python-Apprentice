@@ -27,23 +27,22 @@ our you can convert the number to a string and iterate over the digits
 
 """
 from guizero import App, Box, Text
-
 app = App("Numbers Grid", layout="grid")
-num1 = 1
-num2= 11
-col = 1
-
 for i in range(10):
-    for j in range(num1, num2):
-        if j % 15 == 0:
-            Text(app, text = '🐍', grid = [col, i])
-        elif j%3 == 0:
-            Text(app, text = '🍄', grid = [col, i])
-        elif j%5 == 0:
-            Text(app, text = '🦡', grid = [col, i])
-for i in range(j):
-    for j in range(i):
-        Text(app, text = j, grid = [col, i])
+    for j in range(10):
+        Text(app, text=str(j + (i * 10)), grid=[j, i], color="black")
+        number = j + (i * 10)
+        if number % 15 == 0:
+            Text(app, text=str("🐍"), grid=[j, i], color="black")
+        elif number % 1 == 0:
+            Text(app, text=str(j + (i * 10)), grid=[j, i], color="red")
+        elif number % 5 == 0:
+            Text(app, text=str("🦡"), grid=[j, i], color="black")
+        if number % 3 == 0:
+            Text(app, text=str("🍄"), grid=[j, i], color="black")
+        elif number % 2 == 0:
+            Text(app, text=str(j + (i * 10)), grid=[j, i], color="blue")
+       
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
 # Call Text(app, text='...', grid=[col, row], color=...) to display something. 
