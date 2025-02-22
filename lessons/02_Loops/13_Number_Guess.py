@@ -36,7 +36,13 @@ import random
 from click import prompt
 from traitlets import This
 def ask_integer(prompt):
-    "Function to ask the user to enter a valid number"
+isdiviablebyseven=True
+while isdiviablebyseven:
+    inputvalue=ask_integer("what is your number today")
+    randomnumber = random.randint(1, 100)
+    if randomnumber%7!=0:
+        isdiviablebyseven=False       
+    if inputvalue 
     while True:
         try:
             return int(input(prompt))
@@ -44,7 +50,7 @@ def ask_integer(prompt):
             print("please enter a valid number") 
 isdiviablebyseven=True
 while isdiviablebyseven:
-    inputvalue=ask_integer(prompt)
+    inputvalue=ask_integer("what is your number today")
     randomnumber = random.randint(1, 100)
     if randomnumber%7!=0:
         isdiviablebyseven=False              
@@ -60,24 +66,28 @@ for i in count():
 for i in range(10):
     print(i, end = ' ')
 else:
-    print('else block')
-# Pick the random number
-
-# In your loop:
-
-    # Get the user's guess
-
-    # If the user's guess is divisible by 7, tell the user to start over
-
-    # If the user's guess is too high, tell the user
-    # If the user's guess is too low, tell the user
-    # If the user's guess is correct, tell the user and break out of the loop
-isdiviablebyseven=True
+    randomnumber = random.randint(1, 100)
+    print(randomnumber)
+#isdiviablebyseven=True
 while isdiviablebyseven:
-    inputvalue=ask_integer(prompt)
+    inputvalue=ask_integer("what is your number ja ryu/collin")
     randomnumber = random.randint(1, 100)
     if randomnumber%7!=0:
         isdiviablebyseven=False
+        print("its divisibable by 7 dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
+    number = 1, 1000
+    if inputvalue == randomnumber:
+        print("you got it happy happy happy")
+    elif inputvalue == randomnumber + number:
+        print("number too high dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
+    elif inputvalue == randomnumber - number:
+        print("number too high dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
+#isdiviablebyseven=True
+#while isdiviablebyseven:
+ #   inputvalue=ask_integer(prompt)
+ #   randomnumber = random.randint(1, 100)
+  #  if randomnumber%7!=0:
+   #     isdiviablebyseven=False
         
 
 

@@ -32,16 +32,17 @@ for i in range(10):
     for j in range(10):
         Text(app, text=str(j + (i * 10)), grid=[j, i], color="black")
         number = j + (i * 10)
-        if number % 15 == 0:
-            Text(app, text=str("🐍"), grid=[j, i], color="black")
+        if number % 2 == 0:
+            Text(app, text=str(j + (i * 10)), grid=[j, i], color="blue")
         elif number % 1 == 0:
             Text(app, text=str(j + (i * 10)), grid=[j, i], color="red")
+        if number % 15 == 0:
+            Text(app, text=str("🐍"), grid=[j, i], color="black")
+        elif number % 3 == 0:
+            Text(app, text=str("🍄"), grid=[j, i], color="black")
         elif number % 5 == 0:
             Text(app, text=str("🦡"), grid=[j, i], color="black")
-        if number % 3 == 0:
-            Text(app, text=str("🍄"), grid=[j, i], color="black")
-        elif number % 2 == 0:
-            Text(app, text=str(j + (i * 10)), grid=[j, i], color="blue")
+        number = j + (i * 10)
        
 # If you are displaying a number, calculate the sum of the digits and determine the color
 
