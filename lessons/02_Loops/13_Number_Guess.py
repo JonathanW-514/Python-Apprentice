@@ -35,25 +35,31 @@ import random
 
 from click import prompt
 from traitlets import This
+randomnumber = random.randint(1, 100)
+isdivisablebyseven = randomnumber%7 == 0
 def ask_integer(prompt):
-isdiviablebyseven=True
-while isdiviablebyseven:
-    inputvalue=ask_integer("what is your number today")
-    randomnumber = random.randint(1, 100)
-    if randomnumber%7!=0:
-        isdiviablebyseven=False       
-    if inputvalue 
+
+    return randomnumber == random.randint(1, 100)
+    isdivisablebyseven == randomnumber % 7 == 0
+if isdivisablebyseven == True:
+    while isdivisablebyseven:
+        inputvalue=ask_integer("what is your number today")
+        randomnumber = random.randint(1, 100)
+        if randomnumber%7!=0:
+            isdiviablebyseven=False    
+inputvalue=ask_integer("what is your number today")   
+if inputvalue:
     while True:
         try:
-            return int(input(prompt))
+            int(input(prompt))
         except ValueError:
             print("please enter a valid number") 
-isdiviablebyseven=True
-while isdiviablebyseven:
+isdivisablebyseven=True
+while isdivisablebyseven:
     inputvalue=ask_integer("what is your number today")
     randomnumber = random.randint(1, 100)
     if randomnumber%7!=0:
-        isdiviablebyseven=False              
+        isdivisablebyseven=False              
 from itertools import count
 
 for i in count():
@@ -69,11 +75,11 @@ else:
     randomnumber = random.randint(1, 100)
     print(randomnumber)
 #isdiviablebyseven=True
-while isdiviablebyseven:
+while isdivisablebyseven:
     inputvalue=ask_integer("what is your number ja ryu/collin")
     randomnumber = random.randint(1, 100)
     if randomnumber%7!=0:
-        isdiviablebyseven=False
+        isdivisablebyseven=False
         print("its divisibable by 7 dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
     number = 1, 1000
     if inputvalue == randomnumber:
