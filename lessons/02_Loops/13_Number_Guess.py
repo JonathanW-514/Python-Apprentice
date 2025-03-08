@@ -39,49 +39,16 @@ randomnumber = random.randint(1, 100)
 isdivisablebyseven = randomnumber%7 == 0
 def ask_integer(prompt):
 
-    return randomnumber == random.randint(1, 100)
+    return input(prompt)
     isdivisablebyseven == randomnumber % 7 == 0
-if isdivisablebyseven == True:
-    while isdivisablebyseven:
-        inputvalue=ask_integer("what is your number today")
-        randomnumber = random.randint(1, 100)
-        if randomnumber%7!=0:
-            isdiviablebyseven=False    
-inputvalue=ask_integer("what is your number today")   
-if inputvalue:
-    while True:
-        try:
-            int(input(prompt))
-        except ValueError:
-            print("please enter a valid number") 
-isdivisablebyseven=True
-while isdivisablebyseven:
-    inputvalue=ask_integer("what is your number today")
-    randomnumber = random.randint(1, 100)
-    if randomnumber%7!=0:
-        isdivisablebyseven=False              
-from itertools import count
 
-for i in count():
-
-    print(i, end = ' ')
-
-    if i >= 7:
-        print() 
-        break
-for i in range(10):
-    print(i, end = ' ')
-else:
-    randomnumber = random.randint(1, 100)
-    print(randomnumber)
-#isdiviablebyseven=True
-while isdivisablebyseven:
+while not isdivisablebyseven:
     inputvalue=ask_integer("what is your number ja ryu/collin")
     randomnumber = random.randint(1, 100)
-    if randomnumber%7!=0:
-        isdivisablebyseven=False
+    if randomnumber%7==0:
+        isdivisablebyseven=True
         print("its divisibable by 7 dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
-    number = 1, 1000
+    number = random.randint(1, 1000)
     if inputvalue == randomnumber:
         print("you got it happy happy happy")
     elif inputvalue == randomnumber + number:
