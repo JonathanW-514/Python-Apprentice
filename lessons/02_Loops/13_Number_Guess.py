@@ -41,20 +41,32 @@ def ask_integer(prompt):
 
     return input(prompt)
     isdivisablebyseven == randomnumber % 7 == 0
-
+inputvalue=ask_integer("what is your number ja ryu/collin")
+randomnumber = random.randint(1, 100)
 while not isdivisablebyseven:
-    inputvalue=ask_integer("what is your number ja ryu/collin")
-    randomnumber = random.randint(1, 100)
+    
     if randomnumber%7==0:
         isdivisablebyseven=True
+    number = random.randint(1, 100)
+    if randomnumber%7 == 0:
         print("its divisibable by 7 dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
-    number = random.randint(1, 1000)
-    if inputvalue == randomnumber:
+    if input == randomnumber:
         print("you got it happy happy happy")
-    elif inputvalue == randomnumber + number:
-        print("number too high dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
-    elif inputvalue == randomnumber - number:
-        print("number too high dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
+    while True:
+
+        if inputvalue >= randomnumber:
+            print('number too high')
+        elif inputvalue == randomnumber:
+            print('you got it monke')
+        elif inputvalue%7==0:
+            print('its divisable by 7')
+            break
+    while True:
+
+        if inputvalue <= randomnumber:
+            print('number too low')
+        elif inputvalue == randomnumber:
+            print('you got it monke')
 #isdiviablebyseven=True
 #while isdiviablebyseven:
  #   inputvalue=ask_integer(prompt)
