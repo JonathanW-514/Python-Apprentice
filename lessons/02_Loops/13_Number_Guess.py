@@ -32,47 +32,19 @@ at the bottom of the editor screen; this program does not use the GUI.
 
 from cmath import phase
 import random
-
 from click import prompt
 from traitlets import This
-randomnumber = random.randint(1, 100)
-isdivisablebyseven = randomnumber%7 == 0
 def ask_integer(prompt):
 
     return input(prompt)
-    isdivisablebyseven == randomnumber % 7 == 0
-inputvalue=ask_integer("what is your number ja ryu/collin")
-randomnumber = random.randint(1, 100)
-while not isdivisablebyseven:
-    
-    if randomnumber%7==0:
-        isdivisablebyseven=True
-    number = random.randint(1, 100)
-    if randomnumber%7 == 0:
-        print("its divisibable by 7 dingus!?!?!?!?!?!?!?!!!!!!?!?!?!?!?!?!?!")
-    if input == randomnumber:
-        print("you got it happy happy happy")
-    while True:
-
-        if inputvalue >= randomnumber:
-            print('number too high')
-        elif inputvalue == randomnumber:
-            print('you got it monke')
-        elif inputvalue%7==0:
-            print('its divisable by 7')
-            break
-    while True:
-
-        if inputvalue <= randomnumber:
-            print('number too low')
-        elif inputvalue == randomnumber:
-            print('you got it monke')
-#isdiviablebyseven=True
-#while isdiviablebyseven:
- #   inputvalue=ask_integer(prompt)
- #   randomnumber = random.randint(1, 100)
-  #  if randomnumber%7!=0:
-   #     isdiviablebyseven=False
-        
-
-
+ask_integer('Gimme yo numbah!')
+number = random.randint(1, 100)
+guess = input
+if number == guess:
+    print("U GOT IT MANKE!!!!!!")
+elif number%7 == 0:
+    print("it is divisable by 7!!!!!!!!!!!!!")
+elif guess > number:
+    print("NUMBER TOO HIGH!!!!!!!!")
+elif guess < number:
+    print("NUMBER TOO LOW!!!!!!!!!!!")
