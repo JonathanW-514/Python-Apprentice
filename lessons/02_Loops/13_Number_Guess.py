@@ -36,15 +36,15 @@ from click import prompt
 from traitlets import This
 def ask_integer(prompt):
 
-    return input(prompt)
-ask_integer('Gimme yo numbah!')
-number = random.randint(1, 100)
-guess = input
-if number == guess:
-    print("U GOT IT MANKE!!!!!!")
-elif number%7 == 0:
-    print("it is divisable by 7!!!!!!!!!!!!!")
-elif guess > number:
-    print("NUMBER TOO HIGH!!!!!!!!")
-elif guess < number:
-    print("NUMBER TOO LOW!!!!!!!!!!!")
+    return int(input(prompt))
+while True :
+    number = random.randint(1, 100)
+    guess = ask_integer("Gimme yo numbah!")
+    if number == guess:
+        print("U GOT IT MANKE!!!!!!")
+    elif number%7 == 0:
+        print("it is divisable by 7!!!!!!!!!!!!!")
+    elif guess > number:
+        print("NUMBER TOO HIGH!!!!!!!!")
+    elif guess < number:
+        print("NUMBER TOO LOW!!!!!!!!!!!")
