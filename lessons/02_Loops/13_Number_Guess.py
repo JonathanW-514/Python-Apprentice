@@ -34,15 +34,15 @@ from cmath import phase
 import random
 from click import prompt
 from traitlets import This
-def ask_integer(prompt):
+number = random.randint(1, 100)
 
-    return int(input(prompt))
 while True :
-    number = random.randint(1, 100)
-    guess = ask_integer("Gimme yo numbah!")
+ 
+    guess = int(input("GIME UR NUMBER "))
+    print(number)
     if number == guess:
         print("U GOT IT MANKE!!!!!!")
-    elif number%7 == 0:
+    elif guess%7 == 0:
         print("it is divisable by 7!!!!!!!!!!!!!")
     elif guess > number:
         print("NUMBER TOO HIGH!!!!!!!!")

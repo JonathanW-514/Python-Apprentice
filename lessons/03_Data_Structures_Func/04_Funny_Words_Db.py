@@ -22,9 +22,11 @@ ope
 
 
 # Implement the functions below
-
+definition = definition_entry.value.strip
 
 def add_definition(db, key, value):
+    if PushButton :
+       definition + db
     """
     Add a new definition to the database.
 
@@ -45,9 +47,11 @@ def add_definition(db, key, value):
 
     pass
 
-
 def delete_definition():
-    add_definition = False
+   if PushButton :
+    db = False
+
+
     """
     Deletes the definition associated with the given key from the database.
 
