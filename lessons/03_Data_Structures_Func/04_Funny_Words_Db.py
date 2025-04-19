@@ -22,11 +22,10 @@ ope
 
 
 # Implement the functions below
-definition = definition_entry.value.strip
+
 
 def add_definition(db, key, value):
-    if PushButton :
-       definition + db
+    key + value == db['a']
     """
     Add a new definition to the database.
 
@@ -81,8 +80,9 @@ def is_funny(definition):
         bool: True if the definition contains any of the funny words, False otherwise.
     """
     
-    # Return True if the definition contains any of the funny words, False otherwise
-
+    is_funny = {
+    "geyat", "mew", "pants", "ja ryu", "funny", "very funny"
+    }
     if is_funny:
         "😂 " + definition + " 🤡" 
         return True
