@@ -25,7 +25,8 @@ ope
 
 
 def add_definition(db, key, value):
-    key + value == db['a']
+    key + value == len(db) + value
+    
     """
     Add a new definition to the database.
 
@@ -124,7 +125,7 @@ def _add_definition():
 
     if word and definition:
         if is_funny(definition):
-            definition = "😂 " + definition + " 🤡"
+            definition = "😂 " + definition + "🤡"
         add_definition(dict, word, definition)
         _update_listbox(db)
         word_entry.clear()
