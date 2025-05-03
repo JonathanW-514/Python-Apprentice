@@ -25,8 +25,9 @@ ope
 
 
 def add_definition(db, key, value):
-    key + value == len(db) + value
-    
+    if PushButton:
+        value + db
+    return db
     """
     Add a new definition to the database.
 
@@ -49,8 +50,7 @@ def add_definition(db, key, value):
 
 def delete_definition():
    if PushButton :
-    db = False
-
+    
 
     """
     Deletes the definition associated with the given key from the database.
