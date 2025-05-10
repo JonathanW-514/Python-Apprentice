@@ -21,7 +21,7 @@ colors = ("red", "blue", "green", "yellow", "orange", "purple", "violet", "white
 
 myTurtle = turtle.Turtle()
 myTurtle.shape("turtle")
-myTurtle.speed(100)
+myTurtle.speed(100000000)
 myTurtle.width(9)
 
 sides = 0.000000002

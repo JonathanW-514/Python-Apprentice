@@ -50,6 +50,7 @@ def add_definition(db, key, value):
 
 def delete_definition():
    if PushButton :
+    len(db) - 1
     
 
     """
