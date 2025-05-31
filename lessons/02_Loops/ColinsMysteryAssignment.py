@@ -12,5 +12,9 @@ while True :
     words = input(str("GIME UR WORD MANKE SKIBIDI RIZZ GIGAGAGAGIDIEO NO CAP FR FR"))
     if input:
         for word in words.split():
-            print(word[1:] + "-" + word[0] + "ay")
+            if word[0] == vowel in words.split():
+                print(word + "ay", end = " ")
+            elif word[0] == consonants:
+                print(word[1:] + word[0] + "ay", end=" ")
+        print()
         
