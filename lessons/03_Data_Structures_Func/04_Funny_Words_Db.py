@@ -24,10 +24,17 @@ ope
 # Implement the functions below
 
 
+
+
+
+
+
 def add_definition(db, key, value):
-    if PushButton:
-        value + db
-    return db
+    
+    db[key]=value
+    if len(db) == 5:
+        error("Im FULLLLL","STOP FEEDING MEEEEEEEE!!!!!!!")
+    
     """
     Add a new definition to the database.
 
