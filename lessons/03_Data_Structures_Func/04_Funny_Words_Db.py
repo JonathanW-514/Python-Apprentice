@@ -25,15 +25,14 @@ ope
 
 
 
-
-
+lessthanfive = (0, 1, 2, 3, 4)
 
 
 def add_definition(db, key, value):
+    dict()
     
-    db[key]=value
-    if len(db) == 5:
-        error("Im FULLLLL","STOP FEEDING MEEEEEEEE!!!!!!!")
+    if len(db) < 5:
+        db[key] = value
     
     """
     Add a new definition to the database.
