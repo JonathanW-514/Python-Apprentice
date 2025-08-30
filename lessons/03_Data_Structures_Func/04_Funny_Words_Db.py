@@ -29,11 +29,10 @@ lessthanfive = (0, 1, 2, 3, 4)
 
 
 def add_definition(db, key, value):
-    dict()
-    
     if len(db) < 5:
         db[key] = value
-    
+    elif len(db) > 5:
+        error("TOO FULL", "DELETE SOMETHING TO ADD THIS")
     """
     Add a new definition to the database.
 
@@ -87,17 +86,15 @@ def is_funny(definition):
     Returns:
         bool: True if the definition contains any of the funny words, False otherwise.
     """
-    
-    is_funny = {
-    "geyat", "mew", "pants", "ja ryu", "funny", "very funny"
+    if_sigma = {"jonni", "jonni boi", "Jonni", "jonni boi scam"}
+    for sigma in if_sigma:
+        if sigma in definition:
+            definition += "is very sigma"
+    funny = {
+    "gyatt", "mew", "pants", "ja ryu", "funny", "very funny", "jay", 'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
     }
-    if is_funny:
-        "😂 " + definition + " 🤡" 
+    if definition is funny:
         return True
-    else:
-        if is_funny is False:
-            return False
-
 
 def update_listbox(db):
     """
@@ -109,17 +106,13 @@ def update_listbox(db):
 
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
-    def message():
-        update_listbox(db)
-    l = [
-        message == "message"
-    ]
+    
 
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
     # strings, then add the strings to the list with .append()
 
-    return l
+    return
 
 ################################################################
 
