@@ -25,8 +25,6 @@ ope
 
 
 
-lessthanfive = (0, 1, 2, 3, 4)
-
 
 def add_definition(db, key, value):
     if len(db) < 5:
@@ -106,6 +104,8 @@ def update_listbox(db):
 
     # This function will return a list of definitions to be displayed in the listbox, like
     # the one below. (For your function, you should set this list to the empty list)
+    l = list()
+    add_definition(db, 0, "funny")
     
 
     # Add each definition to a string
@@ -141,6 +141,7 @@ def _update_listbox(db):
     listbox.clear()
     for i in update_listbox(db):
         listbox.append(i)
+
 
 # Function to delete a definition
 def _delete_definition():
