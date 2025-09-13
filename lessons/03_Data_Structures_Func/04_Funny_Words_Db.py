@@ -24,8 +24,6 @@ ope
 # Implement the functions below
 
 
-
-
 def add_definition(db, key, value):
     if len(db) < 5:
         db[key] = value
@@ -45,18 +43,16 @@ def add_definition(db, key, value):
     If there are already 5 items in the database, an error message is displayed and the new item is not added.
     """
 
-    
-
     # Set the item in the database
 
     pass
 
-def delete_definition():
-   if PushButton :
-    len(db) - 1
-    
 
-    """
+def delete_definition():
+    if PushButton:
+        len(db) - 1
+
+        """
     Deletes the definition associated with the given key from the database.
 
     Args:
@@ -67,9 +63,7 @@ def delete_definition():
         None
     """
 
-    
-
-    pass
+        pass
 
 
 def is_funny(definition):
@@ -89,10 +83,11 @@ def is_funny(definition):
         if sigma in definition:
             definition += "is very sigma"
     funny = {
-    "gyatt", "mew", "pants", "ja ryu", "funny", "very funny", "jay", 'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
+        "gyatt", "mew", "pants", "ja ryu", "funny", "very funny", "jay", 'fun', 'funny', 'hilarious', 'amusing', 'pants', 'spleen'
     }
     if definition is funny:
         return True
+
 
 def update_listbox(db):
     """
@@ -106,7 +101,6 @@ def update_listbox(db):
     # the one below. (For your function, you should set this list to the empty list)
     l = list()
     add_definition(db, 0, "funny")
-    
 
     # Add each definition to a string
     # iterate over the dict's key-value pairs and turn them into
@@ -118,10 +112,10 @@ def update_listbox(db):
 
 # Function to add a definition
 
+
 def _add_definition():
     word = word_entry.value.strip()
     definition = definition_entry.value.strip()
-    
 
     if word and definition:
         if is_funny(definition):
@@ -133,13 +127,22 @@ def _add_definition():
     else:
         error("Input Error", "Both fields must be filled out.")
 
+
 # Global dictionary to store definitions
-db = {}
+db = {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5"
+}
 
 # Function to update the listbox with current definitions
+
+
 def _update_listbox(db):
     listbox.clear()
-    for i in update_listbox(db):
+    for i in db:
         listbox.append(i)
 
 
@@ -152,6 +155,7 @@ def _delete_definition():
             del db[word]
             _update_listbox(db)
 
+
 # Main app
 app = App(title="Funny Definitions", width=600, height=300)
 
@@ -160,25 +164,29 @@ top_pane = Box(app, align="top", width="fill", border=True)
 
 Text(top_pane, text="Word:", align="left")
 word_entry = TextBox(top_pane, width="10", align="left")
-Text(top_pane, text="Definition:", width="10" , align="left")
+Text(top_pane, text="Definition:", width="10", align="left")
 definition_entry = TextBox(top_pane, width="25", align="left")
-PushButton(top_pane, text="Add", width="5", align="bottom", command=_add_definition)
+PushButton(top_pane, text="Add", width="5",
+           align="bottom", command=_add_definition)
 
 # Bottom pane for displaying definitions
-bottom_pane = Box(app, align="bottom", width="fill", height="fill", border=True)
+bottom_pane = Box(app, align="bottom", width="fill",
+                  height="fill", border=True)
 listbox = ListBox(bottom_pane, items=[], width="fill", height="fill")
 PushButton(bottom_pane, text="Delete Selected", command=_delete_definition)
 
 # Function to handle enter key press
+
+
 def handle_enter(event):
     if event.tk_event.keysym == "Return":
         add_definition()
         _update_listbox(db)
 
+
 # Bind enter key press event to handle_enter function
 app.when_key_pressed = handle_enter
 
-_update_listbox(db) # Initial update of listbox
+_update_listbox(db)  # Initial update of listbox
 
 app.display()
-
