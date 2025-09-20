@@ -17,18 +17,22 @@ Selected' button will remove the definition from the dictionary.
 
 The module has a limit of storing up to 5 definitions. If the limit is reached,
 an error message will be displayed and new definitions will not be added.
-ope
+open
 """
 
-
+dict = {
+    "1": "1",
+    "2": "2",
+    "3": "3",
+    "4": "4",
+    "5": "5"
+}
 # Implement the functions below
-
-
 def add_definition(db, key, value):
     if len(db) < 5:
         db[key] = value
     elif len(db) > 5:
-        error("TOO FULL", "DELETE SOMETHING TO ADD THIS")
+        error("input error", "DELETE SOMETHING TO ADD THIS")
     """
     Add a new definition to the database.
 
@@ -50,7 +54,7 @@ def add_definition(db, key, value):
 
 def delete_definition():
     if PushButton:
-        len(db) - 1
+        len(dict) - 1
 
         """
     Deletes the definition associated with the given key from the database.
@@ -121,7 +125,7 @@ def _add_definition():
         if is_funny(definition):
             definition = "😂 " + definition + "🤡"
         add_definition(dict, word, definition)
-        _update_listbox(db)
+        _update_listbox(dict)
         word_entry.clear()
         definition_entry.clear()
     else:
@@ -129,13 +133,7 @@ def _add_definition():
 
 
 # Global dictionary to store definitions
-db = {
-    "1": "1",
-    "2": "2",
-    "3": "3",
-    "4": "4",
-    "5": "5"
-}
+
 
 # Function to update the listbox with current definitions
 
@@ -151,9 +149,9 @@ def _delete_definition():
     selected_item = listbox.value
     if selected_item:
         word = selected_item.split(":", 1)[0].strip()
-        if word in db:
-            del db[word]
-            _update_listbox(db)
+        if word in dict:
+            del dict[word]
+            _update_listbox(dict)
 
 
 # Main app
@@ -181,12 +179,12 @@ PushButton(bottom_pane, text="Delete Selected", command=_delete_definition)
 def handle_enter(event):
     if event.tk_event.keysym == "Return":
         add_definition()
-        _update_listbox(db)
+        _update_listbox(dict)
 
 
 # Bind enter key press event to handle_enter function
 app.when_key_pressed = handle_enter
 
-_update_listbox(db)  # Initial update of listbox
+_update_listbox(dict)  # Initial update of listbox
 
 app.display()
