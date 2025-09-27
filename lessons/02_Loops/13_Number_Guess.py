@@ -32,7 +32,6 @@ at the bottom of the editor screen; this program does not use the GUI.
 
 from cmath import phase
 import random
-from click import prompt
 from traitlets import This
 number = random.randint(1, 100)
 
