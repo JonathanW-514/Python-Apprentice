@@ -6,8 +6,75 @@ O_MARK = "O"
 
 # Implement check_row() and check_win() to allow the game to check if a player has won
 # IMPORTANT! In your code, you should use the constants X_MARK and O_MARK instead of the strings "x" and "o"
+x_wins_boards = [
+                # x wins in row 1
+                [
+                    ['o','' ,'o'],
+                    ['x','x','x'],
+                    ['o','' ,''],
+                ],
+                # x wins in col 2
+                [
+                    ['o','' ,'x'],
+                    ['' ,'o','x'],
+                    ['o','' ,'x'],
+                ],
+                # x wins in the first diagonal
+                [
+                    ['x','' ,'o'],
+                    ['' ,'x','o'],
+                    ['o','' ,'x'],
+                ]
+            ]
 
+o_wins_boards = [
+                # o wins in row 0
+                [
+                    ['o','o','o'],
+                    ['' ,'x',''],
+                    ['x','' ,'x'],
+                ],
+                # o wins in col 1
+                [
+                    ['x','o','x'],
+                    ['' ,'o',''],
+                    ['' ,'o','x'],
+                ],
+                # o wins in the second diagonal
+                [
+                    ['x','x' ,'o'],
+                    ['x' ,'o','o'],
+                    ['o','x','x'],
+                ]
+            ]
+
+no_winner_boards = [
+                # No winner example 1
+                [
+                    ['x','o','x'],
+                    ['o','x','o'],
+                    ['o','x','o'],
+                ],
+                # No winner example 2
+                [
+                    ['x','o','x'],
+                    ['x','o','o'],
+                    ['o','x','x'],
+                ],
+                # No winner example 3
+                [
+                    ['x','o','x'],
+                    ['x','x','o'],
+                    ['o','x','o'],
+                ]
+            ]
 def check_row(l):
+    if l == ['x', 'x', 'x']:
+           return 'x'
+    if l == ['o', 'o', 'o']:
+           return 'o'
+
+    
     """
     Args:
         l: a 3 element iterable
@@ -19,6 +86,9 @@ def check_row(l):
     return None
 
 def check_win(board):
+            for i in range (3):
+                s = check_row(board[i])
+                
             """Check if a player has won on a board
             Args:
                 board: a 3x3 2D array
@@ -26,8 +96,9 @@ def check_win(board):
             Returns:
                 The winner's token ( x or o ) if there is one, otherwise None
             """
-
             return None
+
+
 
         # The following code is the main part of the program. It creates a GUI for the
         # game and handles the game logic. Implement the functions above first, then
@@ -104,68 +175,5 @@ class TicTacToe:
                     elif self.turn_n == 9:
                         self.message.value = "It's a draw!"
                         info("Tic-tac-toe","It's a draw!")
-                        info(TicTacToe)
-            x_wins_boards = [
-                # x wins in row 1
-                [
-                    ['o','' ,'o'],
-                    ['x','x','x'],
-                    ['o','' ,''],
-                ],
-                # x wins in col 2
-                [
-                    ['o','' ,'x'],
-                    ['' ,'o','x'],
-                    ['o','' ,'x'],
-                ],
-                # x wins in the first diagonal
-                [
-                    ['x','' ,'o'],
-                    ['' ,'x','o'],
-                    ['o','' ,'x'],
-                ]
-            ]
-
-            o_wins_boards = [
-                # o wins in row 0
-                [
-                    ['o','o','o'],
-                    ['' ,'x',''],
-                    ['x','' ,'x'],
-                ],
-                # o wins in col 1
-                [
-                    ['x','o','x'],
-                    ['' ,'o',''],
-                    ['' ,'o','x'],
-                ],
-                # o wins in the second diagonal
-                [
-                    ['x','x' ,'o'],
-                    ['x' ,'o','o'],
-                    ['o','x','x'],
-                ]
-            ]
-
-            no_winner_boards = [
-                # No winner example 1
-                [
-                    ['x','o','x'],
-                    ['o','x','o'],
-                    ['o','x','o'],
-                ],
-                # No winner example 2
-                [
-                    ['x','o','x'],
-                    ['x','o','o'],
-                    ['o','x','x'],
-                ],
-                # No winner example 3
-                [
-                    ['x','o','x'],
-                    ['x','x','o'],
-                    ['o','x','o'],
-                ]
-            ]
 ttt = TicTacToe(check_win)
 ttt.start()
