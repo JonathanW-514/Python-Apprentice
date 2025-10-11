@@ -69,11 +69,11 @@ no_winner_boards = [
                 ]
             ]
 def check_row(l):
-    if l == ['x', 'x', 'x']:
-           return 'x'
-    if l == ['o', 'o', 'o']:
-           return 'o'
-
+    if l[0] == l[1] == l[2] == X_MARK:
+           return X_MARK
+    if l[0] == l[1] == l[2] == O_MARK:
+           return O_MARK
+    return None
     
     """
     Args:
@@ -86,9 +86,28 @@ def check_row(l):
     return None
 
 def check_win(board):
+            a = list(zip(*board))
+            print(a)
             for i in range (3):
                 s = check_row(board[i])
-                
+                if s == X_MARK:
+                      return X_MARK
+                if s == O_MARK:
+                      return O_MARK
+            for i in range (3):
+                s = check_row(a[i])
+                if s == X_MARK:
+                      return X_MARK
+                if s == O_MARK:
+                      return O_MARK
+                if board[0][0] == board[1][1] == board[2][2] == X_MARK:
+                      return X_MARK
+                if board[0][0] == board[1][1] == board[2][2] == O_MARK:
+                      return O_MARK
+                if board[0][2] == board[1][1] == board[2][0] == X_MARK:
+                      return X_MARK
+                if board[0][2] == board[1][1] == board[2][0] == O_MARK:
+                      return O_MARK
             """Check if a player has won on a board
             Args:
                 board: a 3x3 2D array
