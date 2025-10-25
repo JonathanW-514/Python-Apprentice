@@ -1,9 +1,9 @@
 from tkinter import messagebox, simpledialog, Tk
 import random
+from guizero import App
 
 # Make a new window variable, window = Tk()
-window = Tk()  # ;
-
+window = Tk()  # ;2
 # Hide the window using the window's .withdraw() method
 window.withdraw()  # ;
 

@@ -8,7 +8,7 @@ Implement the random_walk function that will move the turtle randomly in the gri
 
 import turtle
 import random
-
+number = random.randint(1, 100)
 # Set up the screen
 screen = turtle.Screen()
 screen.setup(width=600, height=600)
@@ -24,6 +24,7 @@ walker.pendown()
 
 # Function to move the turtle randomly in the grid
 def random_walk(walker, steps):
+    walker.goto(number, number)
     """ Implement a random walk for the turtle
 
     The turtle will move on a grid, taking a random step in one of the four directions
@@ -64,7 +65,8 @@ def random_walk(walker, steps):
 
 
 # Start the random walk
-random_walk(walker, 200)
+for i in range(100):
+    random_walk(walker, 200)
 
 # Close the turtle window on click
 screen.exitonclick()

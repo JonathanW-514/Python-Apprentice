@@ -7,16 +7,22 @@ window = Tk()
 window.withdraw()
 
 # 1. Change this line to give you a random number between 1 - 100.
-random_num = random.randint(1, 10)
+random_num = random.randint(1, 100)
+print("bruh")
 
 # 2. Print out the random variable that you made in step #1
 
 # 3. Code a for loop to run steps 4-10, 10 times
-
+num = simpledialog.askinteger(title="Question", prompt="GIMME ME A NUMBER MANKE AHAYDYAGYDAYDUEUNG!!!!!")
     # 4. Ask the user for a guess using a pop-up window, and save their response
-
-    # 5. If the guess is correct
-        # 6. Win. Use 'sys.exit(0)' to end the program
+while True :
+    if num == random_num:
+            messagebox.showerror("ha", "maybe u lost hahaha.")
+            sys.exit(0)
+    elif num > random_num:
+            messagebox("6 7 im 11", "too high!!!!! ur a manke")
+    elif num < random_num:
+        messagebox("6 7 im 11", "too small!!!!! ur a manke")
 
     # 7. if the guess is high
         # 8. Tell them it's too high

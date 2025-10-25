@@ -1,5 +1,5 @@
 from tkinter import messagebox, simpledialog, Tk
-
+from guizero import App, Box, Text, TextBox, PushButton, ListBox, error
 # Create a new window variable, window = Tk()
 window = Tk()  # ;
 
@@ -11,8 +11,10 @@ window.withdraw()  # ;
 name = simpledialog.askstring(title="Question", prompt="What is your name?")  # ;
 
 # Show a message box with your message using the .showinfo() method
-messagebox.showinfo(message="Hello " + name + "!!!")  # ;
-
+#messagebox.showinfo(message="Hello " + name + "!!!")  # ;
+messagebox.showerror("err", "Run " + name + " , run someone is coming to touch u!!!!")
+error("u were too late", "look behind u.")
+messagebox.showerror("hahahaha", "made u look " + name + " u are a noob")
 # Print your message to the console using the print() function
 print("Hello " + name + "!!!!")  # ;
 
